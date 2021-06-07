@@ -133,7 +133,6 @@ app.get("/secrets", function(req, res){
             }
         }
     });
-    console.log(res.locals.currentUser);
 });
 
 app.get("/submit", function(req, res){
@@ -233,5 +232,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function() {
-  console.log("Server has started successfully");
+  console.log("Server has started successfully on port 3000");
 });

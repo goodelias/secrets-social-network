@@ -23,12 +23,20 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   .secrets-title {
     font-size: 3.5rem;
   }
   
   .fa-key {
     margin-bottom: 2rem;
+  }
+
+  .delete {
+    margin-bottom: 1.5rem;
   }
 
 }
