@@ -123,10 +123,17 @@ app.get("/secrets", function(req, res){
             console.log(err);
         } else {
             if (foundUsers) {
-                res.render("secrets", {usersWithSecrets: foundUsers, currentUser: res.locals.currentUser});
+                const secretsArray = [];
+                foundUsers.forEach(function(user){
+                    secretsArray.push(user.secret)
+                });
+                const shuffledSecretsArray = secretsArray.sort(() => Math.random() - 0.5)
+                
+                res.render("secrets", {currentUser: res.locals.currentUser, shuffledSecretsArray: shuffledSecretsArray});
             }
         }
     });
+    console.log(res.locals.currentUser);
 });
 
 app.get("/submit", function(req, res){
@@ -162,7 +169,7 @@ app.post("/submit", function(req, res){
 });
 
 app.post("/delete", function(req, res){
-    if (req.user.username === '106354804168606991157') {
+    if (req.user.username === '106354804168606991157' || req.user.username === 'admin@gmail.com') {
         User.updateOne({secret: req.body.secret}, {$pull: {secret: req.body.secret}}, function(err, foundSecret){
             if (err) {
                 console.log(err);
