@@ -21,3 +21,29 @@ body {
 .back {
   margin-top: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .secrets-title {
+    font-size: 3.5rem;
+  }
+  
+  .fa-key {
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .secrets-title {
+    font-size: 2rem;
+  }
+
+  .secret-text {
+    font-size: 1.5rem;
+  }
+
+  .fa-key {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+  }
+}
