@@ -7,11 +7,18 @@ body {
     text-align: center;
 }
 
+.secrets-h1 {
+  margin: 1rem 0;
+}
+
 .secret-text {
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: left;
   font-size: 2rem;
   color: #fff;
   background-color: #000;
+  padding: 0 1rem;
 }
 
 .delete {
@@ -29,6 +36,10 @@ body {
 
   .secrets-title {
     font-size: 3.5rem;
+  }
+
+  .secret-text {
+    text-align: center;
   }
   
   .fa-key {
@@ -48,6 +59,7 @@ body {
 
   .secret-text {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .fa-key {

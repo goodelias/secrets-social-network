@@ -127,7 +127,7 @@ app.get("/secrets", function(req, res){
                 foundUsers.forEach(function(user){
                     secretsArray.push(user.secret)
                 });
-                const shuffledSecretsArray = secretsArray.sort(() => Math.random() - 0.5)
+                const shuffledSecretsArray = secretsArray.sort(() => Math.random() - 0.5);
                 
                 res.render("secrets", {currentUser: res.locals.currentUser, shuffledSecretsArray: shuffledSecretsArray});
             }
